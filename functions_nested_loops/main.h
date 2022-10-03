@@ -1,4 +1,4 @@
-int putchar(void)
+void putchar(void)
 {
 	printf("_putchar\n");
 }
