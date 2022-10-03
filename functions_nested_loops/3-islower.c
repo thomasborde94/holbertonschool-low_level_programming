@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * islower - a
  * Description: checks for lowercase character
