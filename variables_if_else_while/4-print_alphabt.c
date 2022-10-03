@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Description: prints the alphabet
+ * Description: prints the alphabet except e and q
  * Return: always 0
  */
 
