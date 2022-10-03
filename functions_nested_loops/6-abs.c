@@ -3,8 +3,8 @@
 /**
  * _abs - a
  * @n: integer
- * Description: checks input is negative or positive of nul
- * Return: 1 if c is positive, -1 if negative, 0 otherwise
+ * Description: get the absolute value of n
+ * Return: always 0
  */
 
 int _abs(int n)
@@ -17,4 +17,5 @@ int _abs(int n)
 	{
 		printf("%d", n * -1);
 	}
+	return (0);
 }
