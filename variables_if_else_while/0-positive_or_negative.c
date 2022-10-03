@@ -1,9 +1,12 @@
-#include <stdlib.h>
+0;10;1c0;10;1c#include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
 
-/* main - Entry point
- * Description: prints wether n is positive, negative, or 0
+ /**
+ * main - Entry point
+
+ * Description: prints whether n is positive, negative, or 0
+
  * Return: always 0
  */
 
@@ -13,11 +16,11 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if ( n > 0)
+	if (n > 0)
 	{
 		printf("%d is positive\n", n);
 	}
-	if ( n < 0)
+	if (n < 0)
 	{
 		printf("%d is negative\n", n);
 	}
