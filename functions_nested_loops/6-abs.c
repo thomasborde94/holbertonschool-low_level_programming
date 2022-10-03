@@ -13,7 +13,7 @@ int _abs(int n)
 	{
 		printf("%d", n);
 	}
-	if (n < 0)
+	else
 	{
 		printf("%d", n * -1);
 	}
