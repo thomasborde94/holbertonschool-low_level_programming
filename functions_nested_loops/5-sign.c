@@ -7,7 +7,7 @@
  * Return: 1 if c is positive, -1 if negative, 0 otherwise
  */
 
-int sign(int n)
+int print_sign(int n)
 {
 	if (n > 0)
 	{
