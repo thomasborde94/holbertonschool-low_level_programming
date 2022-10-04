@@ -15,11 +15,11 @@ void more_numbers(void)
 	{
 		for (n = 0; n < 15; n++)
 		{
-			if (n > 8)
+			if (n > 9)
 			{
-				_putchar('0' + (n - 10));
+				_putchar('0' + ((n - 10);
 			}
-			_putchar('0' + n);
+			_putchar('0' + n % 10);
 		}
 		_putchar('\n');
 	}
