@@ -1,5 +1,5 @@
 CC=gcc
-SRC=school.c main.c
+SRC=main.c
 OBJ=*.o
 NAME=school
 
