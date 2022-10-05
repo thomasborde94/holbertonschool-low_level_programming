@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * times_tables - prints table of 9
+ * times_table - prints table of 9
  * Description: print the 9 times table
  * Return: void
  */
 
-void times_tables(void)
+void times_table(void)
 {
 	int d, i, prod;
 
