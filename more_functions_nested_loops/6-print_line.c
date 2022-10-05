@@ -9,12 +9,16 @@
 
 void print_line(int n)
 {
-	int i;
+	int i = 0;
 
-	while (i <= n)
+	if (n > 0)
 	{
-		_putchar(95);
+		while (i <= n)
+		{
+			_putchar(95);
+			i++;
+		}
 	}
-	if (i <= 0)
+	if (n <= 0)
 		_putchar('\n');
 }
