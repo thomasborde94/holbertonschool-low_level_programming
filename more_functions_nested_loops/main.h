@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+0;10;1c
 int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);
@@ -10,3 +10,4 @@ void more_numbers(void);
 void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
+void fizz_buss(void);
