@@ -1,5 +1,5 @@
 #include <stdio.h>
-0;10;1c
+
 int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);
