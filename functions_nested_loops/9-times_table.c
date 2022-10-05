@@ -21,12 +21,12 @@ void times_table(void)
 				{
 					_putchar(' ' + prod);
 				}
-					_putchard('0' + prod);
+					_putchar('0' + prod);
 			}
 			else
 			{
 				_putchar('0' + (prod / 10));
-				_putchat('0' + (prod % 10));
+				_putchar('0' + (prod % 10));
 			}
 			if (i != 9)
 			{
