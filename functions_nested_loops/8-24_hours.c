@@ -8,8 +8,12 @@
 
 void jack_bauer(void)
 {
-	int h = 0, m = 0;
+	int m, h;
 
-	if (h >= 10)
-	
+
+
+
+
+	_putchar('\n');
+}	
 		
