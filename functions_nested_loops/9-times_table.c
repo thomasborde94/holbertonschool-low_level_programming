@@ -21,7 +21,7 @@ void times_table(void)
 				{
 					_putchar(' ' + prod);
 				}
-					_putchar('0' + prod);
+			       	_putchar('0' + prod);
 			}
 			else
 			{
