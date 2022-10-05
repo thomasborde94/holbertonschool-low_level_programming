@@ -19,9 +19,9 @@ void times_table(void)
 			{
 				if (i != 0)
 				{
-					_putchar(' ' + prod);
+					_putchar(' ');
 				}
-			       	_putchar('0' + prod);
+				_putchar('0' + prod);
 			}
 			else
 			{
