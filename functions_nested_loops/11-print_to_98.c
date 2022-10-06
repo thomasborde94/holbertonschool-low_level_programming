@@ -9,15 +9,14 @@
 
 void print_to_98(int n)
 {
-	int i;
+	int i, k;
 
-	if ((n >= 0) && (n <= 98))
+	for (i = n; n <= 98; i++)
 	{
-		for (i = n; n <= 98; i++)
+		if (i > 9)
 		{
-			if (i > 9)
-				_putchar('0' + (n /10));
+			_putchar('0' + (i / 10));
 		}
-		_putchar('0' + (n % 10));
+		_putchar('0' + (i % 10));
 	}
 }
