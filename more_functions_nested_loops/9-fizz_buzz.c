@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * fizz_buzz - prints numbers from 1 to 100
+ * main - prints numbers from 1 to 100
  * Description: prints from 1 to 100, where 3 multiples
  * are replaced by Buzz, 5 by Fizz, and both by FizzBuzz
  * Return: void
@@ -17,11 +17,11 @@ int main(void)
 		{
 			printf("FizzBuzz ");
 		}
-		if else (i % 3 == 0)
+		if (i % 3 == 0)
 		{
 			printf("Fizz ");
 		}
-		if else (i % 5 == 0)
+		if (i % 5 == 0)
 		{
 			printf("Buzz ");
 		}
