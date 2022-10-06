@@ -27,7 +27,7 @@ void print_triangle(int size)
 			}
 			if ((size - k - 1) <= i)
 				_putchar('#');
-		}	
+		}
 		_putchar('\n');
 	}
 }
