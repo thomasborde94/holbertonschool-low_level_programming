@@ -1,4 +1,4 @@
-#include "main.h"
+0;10;1c0;10;1c#include "main.h"
 
 /**
  * print_array - prints elements of an array
@@ -21,5 +21,5 @@ void print_array(int *a, int n)
 
 		printf(", ");
 	}
-	_putchar('\n');
+	_putchar("\n");
 }
