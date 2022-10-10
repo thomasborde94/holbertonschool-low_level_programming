@@ -1,4 +1,4 @@
-0;10;1c0;10;1c#include "main.h"
+#include "main.h"
 
 /**
  * rev_string - reverses a string
@@ -18,7 +18,7 @@ void rev_string(char *s)
 		length++;
 	}
 
-	for (i = length - 1; i >= length / 2 - 1; i--)
+	for (i = length - 1; i >= (length / 2) - 1; i--)
 	{
 		newI = s[i];
 		s[i] = s[length - 1 - i];
