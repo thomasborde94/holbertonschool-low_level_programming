@@ -18,12 +18,11 @@ void rev_string(char *s)
 		length++;
 	}
 
-	for (i = length - 1; i >= (length / 2) - 1; i--)
+	for (i = length - 1; i >= length / 2; i--)
 	{
 		newI = s[i];
 		s[i] = s[length - 1 - i];
 		s[length - i - 1] = newI;
 	}
-
 	_putchar('\n');
 }
