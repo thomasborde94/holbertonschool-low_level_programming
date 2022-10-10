@@ -11,15 +11,18 @@ void rev_string(char *s)
 {
 	int length = 0;
 	int i;
+	char newi;
 
 	while (s[length] != '\0')
 	{
 		length++;
 	}
 
-	for (i = length - 1; i >= 0; i--)
+	for (i = length - 1; i >= length / 2; i--)
 	{
+		newi = s[i];
 		s[i] = s[length - 1 - i];
+		s[len - i - 1] = newi;
 	}
 
 	_putchar('\n');
