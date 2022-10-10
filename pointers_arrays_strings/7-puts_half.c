@@ -19,7 +19,7 @@ void puts_half(char *str)
 		x = length / 2;
 
 	if (length % 2 == 1)
-		x = (length - 1) / 2;
+		x = (length + 1) / 2;
 
 	for (i = x; i < length; i++)
 		_putchar(str[i]);
