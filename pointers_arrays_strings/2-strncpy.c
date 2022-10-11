@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncopy - copies a string
+ * _strncpy - copies a string
  * Description: copies a string to dest
  * @dest:This is the pointer to the destination array where the content
  * is to be copied.
@@ -12,13 +12,14 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
+	int length = 0;
+	int i;
 
-	while (i < n && src[i])
-	{
+	while (src[length])
+		length++;
+
+	for (i = 0; src[i] && i < n; i++)
 		dest[i] = src[i];
-		i++;
-	}
 
 	dest[i] = '\0';
 
