@@ -12,7 +12,7 @@ char *string_toupper(char *str)
 {
 	int i;
 
-	while (str[a])
+	while (str[i])
 	{
 		if (str[i] >= 97 && str[i] <= 122)
 			p[i] -= 32;
