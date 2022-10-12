@@ -22,6 +22,7 @@ char *leet(char *str)
 			if (*str == toReplace[i])
 				*str = code[i] + '0';
 		}
+		s++;
 	}
 
 	return (str);
