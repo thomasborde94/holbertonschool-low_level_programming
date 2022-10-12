@@ -23,4 +23,6 @@ char *leet(char *str)
 				*str = code[i] + '0';
 		}
 	}
+
+	return (str);
 }
