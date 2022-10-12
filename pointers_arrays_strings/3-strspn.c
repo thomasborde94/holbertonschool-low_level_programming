@@ -3,7 +3,7 @@
 /**
  * _strspn - returns length of a string made only
  * of characters contained in another string
- * Description: Returns length of string s written
+ * Description: Returns inital length of string s written
  * only with accept characters
  * @s: string to check
  * @accept: characters accepted
@@ -21,7 +21,14 @@ unsigned int _strspn(char *s, char *accept)
 		for (i = 0; accept[i]; i++)
 		{
 			if (*s == accept[i])
+			{
 				count++;
+				break;
+			}
+
+			else
+				return (count);
+			
 		}
 		s++;
 	}
