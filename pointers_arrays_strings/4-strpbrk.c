@@ -13,7 +13,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i;
-	
+
 	if (s == NULL || accept == NULL)
 		return (NULL);
 
