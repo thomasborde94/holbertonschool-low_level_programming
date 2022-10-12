@@ -16,7 +16,7 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int count = 0;
 	int i;
 
-	while (*s)
+	while (*s++)
 	{
 		for (i = 0; accept[i]; i++)
 		{
@@ -24,8 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				count++;
 			}
-			else
-				return (count);
+		       
 		}
 		s++;
 	}
