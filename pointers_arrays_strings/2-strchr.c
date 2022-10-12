@@ -13,11 +13,8 @@
 
 char *_strchr(char *s, char c)
 {
-	while (*s)
+	while (*s && c != '\0')
 	{
-		if (c == '\0')
-			return (NULL);
-		
 		if (*s == c)
 			return (s);
 		s++;
