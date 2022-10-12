@@ -19,8 +19,8 @@ char *leet(char *str)
 	{
 		for (i = 0; i < 10; i++)
 		{
-			if (*s == toReplace[i])
-				*s = code[i] + '0';
+			if (*str == toReplace[i])
+				*str = code[i] + '0';
 		}
 	}
 }
