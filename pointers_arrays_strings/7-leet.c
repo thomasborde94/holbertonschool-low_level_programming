@@ -20,7 +20,7 @@ char *leet(char *str)
 		for (i = 0; i < 10; i++)
 		{
 			if (*str == toReplace[i])
-				*str = code[i] + '0';
+				*str = code[i];
 		}
 		str++;
 	}
