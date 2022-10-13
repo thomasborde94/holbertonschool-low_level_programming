@@ -13,17 +13,20 @@ char *_strstr(char *haystack, char *needle)
 {
 	while (*haystack)/* tant qu'on arrive pas au NULL terminator */
 	{
-		char *begin = haystack;/* crée un pointer qui a comme valeur l'adresse de haystack*/
-		char *pattern = needle;/* crée un pointer qui a comme valeur l'adresse de needle*/
+		char *begin = haystack;/* crée un pointer qui 
+					  a comme valeur l'adresse de haystack*/
+		char *pattern = needle;/* crée un pointer qui a
+					  comme valeur l'adresse de needle*/
 
-		while (*haystack && *pattern && *haystack == *pattern)/*Si un character match un character de needle, on check le reste de la string*/
+		while (*haystack && *pattern && *haystack == *needle)/*Si un
+								character match un character de needle, on check le reste de la string*/
 		{
 			haystack++;
 			pattern++;
 		}
 
 		if (!*pattern)
-			return begin;
+			return (begin);
 
 		haystack = begin + 1;
 	}
