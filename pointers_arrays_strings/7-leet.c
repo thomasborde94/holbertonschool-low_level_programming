@@ -17,7 +17,7 @@ char *leet(char *str)
 
 	while (*str)
 	{
-		for (i = 0; i < 10; i++)
+		for (i = 0; toReplace[i]; i++)
 		{
 			if (*str == toReplace[i])
 				*str = code[i];
