@@ -18,7 +18,7 @@ char *_strstr(char *haystack, char *needle)
 		char *pattern = needle;/* crée un pointer qui a
 					  comme valeur l'adresse de needle*/
 
-		while (*haystack && *pattern && *haystack == *needle)/*Si un
+		while (*haystack && *pattern && *haystack == *pattern)/*Si un
 								character match un character de needle, on check le reste de la string*/
 		{
 			haystack++;
