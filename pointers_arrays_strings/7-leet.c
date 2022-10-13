@@ -12,17 +12,17 @@
 char *leet(char *str)
 {
 	int i = 0;
-	int x = 0;
 	char toReplace[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	char code[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	for (i = 0; str[i]; i++)
+	while (*str)
 	{
-		for (x = 0; toReplace[x]; x++)
+		for (i = 0; toReplace[i]; i++)
 		{
-			if (str[i] == toReplace[x])
-				str[i] = code[x];
+			if (str[i] == toReplace[i])
+				str[i] = code[i];
 		}
+		str++;
 	}
 
 	return (str);
