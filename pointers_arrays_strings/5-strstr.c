@@ -29,7 +29,7 @@ char *_strstr(char *haystack, char *needle)
 		if (!*pattern)
 			return (begin);
 
-		haystack = begin + 1; // increament main string
+		haystack = begin + 1; /*increament main string*/
 	}
 	return (NULL);
 }
