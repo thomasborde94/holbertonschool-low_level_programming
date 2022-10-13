@@ -23,7 +23,7 @@ char *leet(char *str)
 			if (str[i] == toReplace[a])
 			{
 				str[i] = code[a];
-				continue;
+				break;
 			}
 		}
 	}
