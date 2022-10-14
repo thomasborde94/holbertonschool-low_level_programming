@@ -11,6 +11,6 @@
 
 void print_diagsums(int *a, int size)
 {
-	for (size = 0; a[size][size]; size++)
+	for (size = 0; a; size++)
 		size += *a[size][size];
 }
