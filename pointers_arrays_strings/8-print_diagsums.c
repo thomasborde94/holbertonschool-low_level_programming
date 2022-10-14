@@ -24,8 +24,12 @@ void print_diagsums(int *a, int size)
 
 	for (j = size - 1; j < size * size; j++)
 	{
+		if (j == (size * size) - 1)
+			break;
+		
 		sum2 += a[j];
-		j += size - 1;
+		j += size - 2;
+
 	}
 
 	printf("%d, %d\n", sum1, sum2);
