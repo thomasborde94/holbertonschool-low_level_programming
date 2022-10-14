@@ -1,4 +1,4 @@
-0;10;1c0;10;1c#include "main.h"
+#include "main.h"
 
 /**
  * print_diagsums - prints sum of two diagonals
