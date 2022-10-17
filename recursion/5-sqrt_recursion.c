@@ -1,4 +1,4 @@
-0;10;1c0;10;1c#include "main.h"
+#include "main.h"
 
 /**
  * _sqrt_recursion - returns natural square root of n
