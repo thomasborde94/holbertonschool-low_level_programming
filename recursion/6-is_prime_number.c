@@ -36,5 +36,5 @@ int find_if_prime(int n, int i)
 		return (0);
 
 	else
-		return (find_if_prime(n i + 1));
+		return (find_if_prime(n, i + 1));
 }
