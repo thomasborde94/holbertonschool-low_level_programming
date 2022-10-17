@@ -19,8 +19,8 @@ int _sqrt_recursion(int n)
 
 	if (guess * guess <= n)
 	{
-		guess = _sqrt_recursion(n);
 		guess++;
+		guess = _sqrt_recursion(n);
 	}
 
 	else
