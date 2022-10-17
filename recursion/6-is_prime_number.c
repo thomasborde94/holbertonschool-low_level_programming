@@ -29,7 +29,7 @@ int find_if_prime(int n, int i)
 {
 	i = 2;
 
-	if (n % i == 0 && i != 1)
+	if (n % i == 0)
 		return (1);
 
 	if (i > n)
