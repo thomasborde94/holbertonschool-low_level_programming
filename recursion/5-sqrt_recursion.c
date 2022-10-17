@@ -22,4 +22,7 @@ int _sqrt_recursion(int n)
 		guess = _sqrt_recursion(n);
 		guess++;
 	}
+
+	else
+		return (-1);
 }
