@@ -11,7 +11,7 @@ int find_square_root(int n, int guess);
 
 int _sqrt_recursion(int n)
 {
-	return(find_square_root(n, 1));
+	return (find_square_root(n, 1));
 }
 
 /**
