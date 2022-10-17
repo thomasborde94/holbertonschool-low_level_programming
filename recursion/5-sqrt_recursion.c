@@ -23,12 +23,12 @@ int _sqrt_recursion(int n)
 
 int find_square_root(int n, int guess)
 {
-	int guess = 1;
+	int res = guess * guess;
 
-	if (guess * guess == n)
+	if (res == n)
 		return (guess);
 
-	if (guess * guess > n)
+	if (res > n)
 		return (-1);
 
 	return (find_square_root(n, guess + 1));
