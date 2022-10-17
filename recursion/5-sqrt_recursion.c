@@ -9,6 +9,18 @@
 
 int _sqrt_recursion(int n)
 {
+	return(find_square_root(n, 1));
+}
+
+/**
+ * find_square_root - finds square root of n
+ * Description: finds square root of n
+ * @n: int we search square root of
+ * @i: iterate int
+ */
+
+int find_square_root(int n, int guess)
+{
 	int guess = 1;
 
 	if (guess * guess == n)
@@ -17,12 +29,5 @@ int _sqrt_recursion(int n)
 	if (guess * guess > n)
 		return (-1);
 
-	if (guess * guess <= n)
-	{
-		guess++;
-		guess = _sqrt_recursion(n);
-	}
-
-	else
-		return (-1);
+	return (find_square_root(n, guess + 1));
 }
