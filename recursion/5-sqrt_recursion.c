@@ -1,4 +1,4 @@
-#include "main.h"
+0;10;1c0;10;1c#include "main.h"
 
 /**
  * _sqrt_recursion - returns natural square root of n
@@ -6,6 +6,8 @@
  * @n: int we search the square root of
  * Return: square root of n
  */
+
+int find_square_root(int n, int guess);
 
 int _sqrt_recursion(int n)
 {
