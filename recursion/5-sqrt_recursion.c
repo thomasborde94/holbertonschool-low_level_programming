@@ -1,13 +1,14 @@
 #include "main.h"
 
+
+int find_square_root(int n, int guess);
+
 /**
  * _sqrt_recursion - returns natural square root of n
  * Description: returns natural square root of n
  * @n: int we search the square root of
  * Return: square root of n
  */
-
-int find_square_root(int n, int guess);
 
 int _sqrt_recursion(int n)
 {
@@ -18,7 +19,8 @@ int _sqrt_recursion(int n)
  * find_square_root - finds square root of n
  * Description: finds square root of n
  * @n: int we search square root of
- * @i: iterate int
+ * @guess: iterate int
+ * Return: natural square root
  */
 
 int find_square_root(int n, int guess)
