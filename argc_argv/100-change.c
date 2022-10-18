@@ -16,11 +16,6 @@ int reste(int change);
 
 int main(int argc, char *argv[])
 {
-	int a = 1;
-	int b = 2;
-	int c = 5;
-	int d = 10;
-	int e = 25;
 	int x = 0;
 	int y = 0;
 
