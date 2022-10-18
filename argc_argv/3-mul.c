@@ -11,7 +11,6 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
 	int prod;
 
 	if (argc < 2)
@@ -20,8 +19,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	for (i = 1; i < argc; i++)
-		prod *= atoi(argv[i]);
+	prod = atoi(argv[1]) * atoi(argv[2];
 	printf("%d\n", prod);
 
 	return (0);
