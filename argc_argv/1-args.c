@@ -1,4 +1,4 @@
-#include <stdio.h>
+0;10;1c0;10;1c#include <stdio.h>
 
 /**
  * main - prints the number of arguments passed into
@@ -10,7 +10,7 @@
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc)
 {
 	printf("%d", argc);
 	return (0);
