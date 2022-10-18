@@ -1,4 +1,4 @@
-0;10;1c0;10;1c#include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - prints the number of arguments passed into
@@ -6,7 +6,6 @@
  * Description: prints the number of argmuents passed into
  * the program
  * @argc: argc
- * @argv: argv
  * Return: 0
  */
 
