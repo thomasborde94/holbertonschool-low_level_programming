@@ -1,4 +1,4 @@
-0;10;1c0;10;1c#include "main.h"
+#include "main.h"
 
 int find_if_prime(int n, int i);
 
