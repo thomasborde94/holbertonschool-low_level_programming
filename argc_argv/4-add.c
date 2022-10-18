@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	int symbol;
 	int sum;
 
-       	for (i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		for (symbol = 0; argv[i][symbol]; symbol++)
 		{
