@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	if (atoi(argv[1]) < 0)
+	else if (atoi(argv[1]) < 0)
 		return (0);
 
 	else
