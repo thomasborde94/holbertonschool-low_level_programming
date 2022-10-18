@@ -1,4 +1,4 @@
-#include "main.h"
+0;10;1c0;10;1c#include "main.h"
 
 int find_if_prime(int n, int i);
 
@@ -27,6 +27,9 @@ int is_prime_number(int n)
 
 int find_if_prime(int n, int i)
 {
+	if (n == 0)
+		return (0);
+	
 	if (n % i == 0 && i < n)
 		return (0);
 
