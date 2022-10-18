@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	int sum;
 
 	if (argc < 2)
-		printf("0\n");
+		break;
 
 	for (i = 1; i < argc; i++)
 	{
