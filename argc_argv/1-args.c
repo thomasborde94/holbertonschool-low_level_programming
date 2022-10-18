@@ -6,11 +6,14 @@
  * Description: prints the number of argmuents passed into
  * the program
  * @argc: argc
+ * @argv: argv
  * Return: 0
  */
 
-int main(int argc)
+int main(int argc, char *argv[])
 {
-	printf("%d", argc);
+	(void) argv;
+
+	printf("%d\n", argc - 1);
 	return (0);
 }
