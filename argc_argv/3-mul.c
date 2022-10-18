@@ -1,4 +1,4 @@
-#include <stdio.h>
+0;10;1c0;10;1c#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	int prod;
 
-	if (argc < 2)
+	if (argc <= 2)
 	{
 		printf("Error\n");
 		return (1);
