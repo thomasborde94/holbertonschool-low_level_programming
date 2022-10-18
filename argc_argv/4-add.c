@@ -1,4 +1,4 @@
-#include <stdlib.h>
+0;10;1c0;10;1c#include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
 
@@ -17,16 +17,16 @@ int main(int argc, char *argv[])
 	int sum;
 
        	for (i = 1; i < argc; i++)
-       	{
-       		for (symbol = 0; argv[i][symbol]; symbol++)
-       		{
-       			if (argv[i][symbol] < 48 || argv[i][symbol] > 57)
-       			{
-       				printf("Error\n");
-       				return (1);
-       			}
-       		}
-       		sum += atoi(argv[i]);
+	{
+		for (symbol = 0; argv[i][symbol]; symbol++)
+		{
+			if (argv[i][symbol] < 48 || argv[i][symbol] > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		sum += atoi(argv[i]);
 	}
 
 	printf("%d\n", sum);
