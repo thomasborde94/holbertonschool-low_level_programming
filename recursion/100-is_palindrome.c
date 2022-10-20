@@ -54,13 +54,13 @@ int find_if_palindrome(char *s, int length, int i)
 	length = _strlen_recursion(s);
 
 	if (s[i] == s[length - i - 1])
+	{
+		if (i == length - 1)
 		{
-			if (i == length - 1)
-			{
-				return (1);
-			}
-			return (find_if_palindrome(s, length, i + 1));
+			return (1);
 		}
+		return (find_if_palindrome(s, length, i + 1));
+	}
 
 	else
 		return (0);
