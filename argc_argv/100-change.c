@@ -50,6 +50,13 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
+/**
+ * reste - returns reste of division
+ * Description: returns rest of division
+ * @change: int divided
+ * Return: reste of division
+ */
+
 int reste(int change)
 {
 	int reste;
@@ -74,6 +81,13 @@ int reste(int change)
 
 	return (reste);
 }
+
+/**
+ * division - returns result of division
+ * Description: returns result of division
+ * @change: int divided
+ * Return: result of division
+ */
 
 int division(int change)
 {
