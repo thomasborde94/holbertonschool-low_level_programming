@@ -12,7 +12,7 @@ int find_if_palindrome(char *s, int length, int i);
 
 int is_palindrome(char *s)
 {
-	return (*s, _strlen_recursion(s), 0);
+	return (s, _strlen_recursion(s), 0);
 }
 
 /**
