@@ -74,7 +74,7 @@ int reste(int change)
 		reste = change % 2;
 
 	else if (change == 1)
-		reste = 1;
+		reste = 0;
 
 	else if (change == 0)
 		reste = 0;
