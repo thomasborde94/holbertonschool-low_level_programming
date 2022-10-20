@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	else if (atoi(argv[1]) < 0)
+	if (atoi(argv[1]) < 0)
 		return (0);
 
 	else
@@ -38,10 +38,10 @@ int main(int argc, char *argv[])
 	{
 		while (y != 0)
 		{
-			x+= division(y);
+			x += division(y);
 			y = reste(y);
 		}
-	}	
+	}
 
 	printf("%d\n", x);
 	return (0);
@@ -54,13 +54,13 @@ int reste(int change)
 	if (change >= 25)
 		reste = change % 25;
 
-	else if (change >= 10)
+	else if (change >= 10 && change < 25)
 		reste = change % 10;
 
-	else if (change >= 5)
+	else if (change >= 5 && change < 10)
 		reste = change % 5;
 
-	else if (change >= 2)
+	else if (change >= 2 && change < 5)
 		reste = change % 2;
 
 	else if (change == 1)
@@ -79,13 +79,13 @@ int division(int change)
 	if (change >= 25)
 		division = change / 25;
 
-	else if (change >= 10)
+	else if (change >= 10 && change < 25)
 		division = change / 10;
 
-	else if (change >= 5)
+	else if (change >= 5 && change < 10)
 		division = change / 5;
 
-	else if (change >= 2)
+	else if (change >= 2 && change < 5)
 		division = change / 2;
 
 	else if (change == 1)
