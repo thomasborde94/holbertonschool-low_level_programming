@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+/**
+ * main - prints combination of digits
+ * Description: prints all combinations of two digits
+ * prints only the smallest combination of two digits
+ * Return: void
+ */
+
+void main(void)
+{
+	int a, b;
+
+	
+}
