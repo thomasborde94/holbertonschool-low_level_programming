@@ -33,6 +33,7 @@ int **alloc_grid(int width, int height)
 
 			free(twoDarray);
 			return (NULL);
+		}
 	}
 
 	for (twoDheight = 0; twoDheight < height; twoDheight++)
