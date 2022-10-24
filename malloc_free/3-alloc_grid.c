@@ -21,7 +21,7 @@ int **alloc_grid(int width, int height)
 	if (twoDarray == NULL)
 		return (NULL);
 
-	for (twoDheigth = 0; twoDheigth < height; twoDheight++)
+	for (twoDheight = 0; twoDheight < height; twoDheight++)
 	{
 		twoDarray[twoDheight] = malloc(sizeof(int) * width);
 	}
