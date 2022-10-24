@@ -8,29 +8,29 @@
  * Return: pointer to a 2D aerray of ints
  */
 
-int **alloc_grind(int width, int height)
+int **alloc_grid(int width, int height)
 {
-	int **2Darray;
-	int 2dheight, 2dwidth;
+	int **twoDarray;
+	int twoDheight, twoDwidth;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	2Darray = malloc(sizeof(int *) * height);
+	twoDarray = malloc(sizeof(int *) * height);
 
-	if (2Darray == NULL)
+	if (twoDarray == NULL)
 		return (NULL);
 
-	for (2dheigth = 0; 2dheigth < height; 2dheight++)
+	for (twoDheigth = 0; twoDheigth < height; twoDheight++)
 	{
-		2Darray[2dheight] = malloc(sizeof(int) * width);
+		twoDarray[twoDheight] = malloc(sizeof(int) * width);
 	}
 
-	for (2dheight = 0; 2dheight < height; 2dheight++)
+	for (twoDheight = 0; twoDheight < height; twoDheight++)
 	{
-		for (2dwidth = 0; 2dwidth < width; 2dwidth++)
-			2Darray[2dheight][2dwidth] = 0;
+		for (twoDwidth = 0; twoDwidth < width; twoDwidth++)
+			twoDarray[twoDheight][twoDwidth] = 0;
 	}
 
-	return (2Darray)
+	return (twoDarray)
 }
