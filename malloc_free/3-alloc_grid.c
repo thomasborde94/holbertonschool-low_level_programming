@@ -32,5 +32,5 @@ int **alloc_grid(int width, int height)
 			twoDarray[twoDheight][twoDwidth] = 0;
 	}
 
-	return (twoDarray)
+	return (twoDarray);
 }
