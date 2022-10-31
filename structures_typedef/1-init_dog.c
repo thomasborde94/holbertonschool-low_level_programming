@@ -12,15 +12,5 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	dog dog = {*d, *name, age, *owner);
-}
-
-/**
- * main - main
- * Description: main
- * Return: void
- */
-int main(void)
-{
-	return (0);
+	dog d = {*name, age, *owner);
 }
