@@ -23,18 +23,18 @@ int main(int argc,char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (*op != "+" || *op != "-" || *op != '*' || *op != '/' || *op != '%')
+	if (get_op_func(argv[2]) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if(*op == '/' && num2 == "0" || *op == '%' && num2 == "0")
+	if((*op == '/' && num2 == 0) || (*op == '%' && num2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	result = get_op_func(operator)(num1, num2);
+	result = get_op_func(op)(num1, num2);
 	printf("%d\n", result);
 	return (0);
 }
