@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
 {
 	int result, num1, num2;
 	char *op;
-	int size = 0;
 
 	if (argc != 4)
 	{
@@ -27,11 +26,7 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	op = argv[2];
 
-	while (argv[2][size])
-		size++;
-		
-
-	if (get_op_func(op) == NULL || size != 1)
+	if (get_op_func(op) == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
