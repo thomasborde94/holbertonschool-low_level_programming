@@ -1,4 +1,4 @@
-#include <stdargs.h>
+#include <stdarg.h>
 
 /**
  * sum_them_all - adds ints
