@@ -82,26 +82,28 @@ void print_all(const char * const format, ...)
 		{"c", va_argC},
 		{"i", va_argI},
 		{"f", va_argF},
-		{"s", va_argS}
+		{"s", va_argS},
+		{NULL, NULL}
 	};
 	int i = 0;
 	int j = 0;
 
-	va_start(args, format);
-
-	while (format && (*(format + i)))
-	{
-		j = 0;
-		while (j < 4 && (*(format + i) != *(pas[j].type)))
-			       j++;
-		if (j < 4)
-		{
-			printf("%s", separator);
-			pas[j].f(args);
-			separator = ", ";
-		}
-		i++;
-	}
+	while (format && format[i] != '\0') /*format = ceis utilisateur*/
+	   {
+		   while (pas[j].type)/*on parcoure le tableau de structure apf*/
+		   {
+			   if (*pas[j].type == format[i])/*on compare la valeur*/
+			   {
+				   pas[j].f(args);/*La on appel la bonne fonction*/
+				   if (format[i + 1] == '\0')
+					   break;
+				   printf(", ");
+			   }
+			   j++;
+		   }
+		   j = 0;
+		   i++;
+	   }
 
 	printf("\n");
 	va_end(args);
