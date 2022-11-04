@@ -73,10 +73,10 @@ void print_all(const char * const format, ...)
 	va_list args;
 
 	pa pas[] = {
-		{"c", va_argC(va_list args)},
-		{"i", va_argI(va_list args)},
-		{"f", va_argF(va_list args)},
-		{"s", va_argS(va_list args)},
+		{"c", va_argC},
+		{"i", va_argI},
+		{"f", va_argF},
+		{"s", va_argS},
 		{NULL, NULL}
 	};
 	int i = 0;
