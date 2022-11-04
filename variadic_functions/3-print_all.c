@@ -65,6 +65,7 @@ void print_all(const char * const format, ...)
 	va_list arg;
 	int i = 0;
 	int j = 0;
+	char *esp = "";
 
 	va_start(arg, format);
 
@@ -74,10 +75,9 @@ void print_all(const char * const format, ...)
 		{
 			if (*apf[j].p == format[i])/*on compare la valeur*/
 			{
+				printf("%s", esp);
 				apf[j].f(arg);/*La on appel la bonne fonction */
-				if (format[i + 1] == '\0')
-					break;
-				printf(", ");
+				esp = ", ";
 			}
 			j++;
 		}
