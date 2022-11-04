@@ -2,103 +2,83 @@
 #include "variadic_functions.h"
 
 /**
- * va_argC - print character
- * Description: prints character
- * @args: va_list to go through
- * Return: void
+ * prin_char - imprimer un entier
+ * @arg: argument
+ * Return: ()
  */
-
-void va_argC(va_list args)
+void prin_char(va_list arg)
 {
-	char c;
-
-	c = va_arg(args, int);
-	printf("%c", c);
+	printf("%c", va_arg(arg, int));
 }
 
 /**
- * va_argI - print int
- * Description: prints integer
- * @args: va_list to go through
- * Return: void
+ * prin_int - imprimer un entier
+ * @arg: argument
+ * Return: ()
  */
-
-void va_argI(va_list args)
+void prin_int(va_list arg)
 {
-	int i;
-
-	i = va_arg(args, int);
-	printf("%d", i);
+	printf("%d", va_arg(arg, int));
 }
 
 /**
- * va_argF - prints float
- * Description: prints float
- * @args: va_list to go through
- * Return: void
+ * prin_float - imprimer un float
+ * @arg: argument
+ * Return: ()
  */
-
-void va_argF(va_list args)
+void prin_float(va_list arg)
 {
-	float f;
-
-	f = va_arg(args, double);
-	printf("%f", f);
+	printf("%f", va_arg(arg, double));
 }
 
 /**
- * va_argS - prints string
- * Description: prints string
- * @args: va_list to go through
- * Return: void
+ * prin_string - imprimer un string
+ * @arg: argument
+ * Return: ()
  */
-
-void va_argS(va_list args)
+void prin_string(va_list arg)
 {
-	char *s;
-
-	s = va_arg(args, char *);
-	printf("%s", s);
+	printf("%s", va_arg(arg, char*));
 }
 
 /**
- * print_all - prints anyting
- * Description: prints anything
- * @format: list of arguments passed to the function
- * Return: void
+ * print_all - imprimer n'importe quoi.
+ * @format: Le type
+ * @...: nombre d 'argument
  */
-
 void print_all(const char * const format, ...)
 {
-	va_list args;
-
-	pa pas[] = {
-		{"c", va_argC},
-		{"i", va_argI},
-		{"f", va_argF},
-		{"s", va_argS},
+	prin_t apf[] = {
+		{"c", prin_char},
+		{"i", prin_int},
+		{"f", prin_float},
+		{"s", prin_string},
 		{NULL, NULL}
 	};
+
+	va_list arg;
+
+	va_start(arg, format);
+
 	int i = 0;
 	int j = 0;
 
 	while (format && format[i] != '\0') /*format = ceis utilisateur*/
-	   {
-		   while (pas[j].type)/*on parcoure le tableau de structure apf*/
-		   {
-			   if (*pas[j].type == format[i])/*on compare la valeur*/
-			   {
-				   pas[j].f(args);/*La on appel la bonne fonction*/
-				   if (format[i + 1] == '\0')
-					   break;
-				   printf(", ");
-			   }
-			   j++;
-		   }
-		   j = 0;
-		   i++;
-	   }
-
+	{
+		while (apf[j].p)/*on parcoure le tableau de structure apf*/
+		{
+			if (*apf[j].p == format[i])/*on compare la valeur*/
+			{
+				apf[j].f(arg);/*La on appel la bonne fonction */
+				if (format[i + 1] == '\0')
+					break;
+				printf(", ");
+			}
+			j++;
+		}
+		j = 0;
+		i++;
+	}
 	printf("\n");
-	va_end(args);
+	va_end(arg);
 }

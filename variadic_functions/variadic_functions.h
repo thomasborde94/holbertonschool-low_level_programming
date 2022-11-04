@@ -11,10 +11,10 @@
  * @va: va_arg call
  */
 
-typedef struct pa {
-	char *type;
+typedef struct prin {
+	char *p;
 	void (*f)(va_list args);
-} pa;
+} prin_t;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
