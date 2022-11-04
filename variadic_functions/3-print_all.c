@@ -89,10 +89,10 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
-	while (format[i])
+	while (format && (*(format + i)))
 	{
 		j = 0;
-		while (*(pas[j].type) != format[i])
+		while (j < 4 && (*(format + i) != *(pas[j].type)))
 			       j++;
 		if (j < 4)
 		{
