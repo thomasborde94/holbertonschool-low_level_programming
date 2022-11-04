@@ -68,7 +68,7 @@ void va_argS(va_list args)
  * Return: void
  */
 
-int print_all(const char * const format, ...)
+void print_all(const char * const format, ...)
 {
 	va_list args;
 
@@ -96,5 +96,5 @@ int print_all(const char * const format, ...)
 	}
 
 	printf("\n");
-	return (0);
+	return (NULL);
 }
