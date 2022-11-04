@@ -28,7 +28,7 @@ void va_argI(va_list args)
 	int i;
 
 	i = va_arg(args, int);
-	printf("%i", i);
+	printf("%d", i);
 }
 
 /**
@@ -55,9 +55,14 @@ void va_argF(va_list args)
 
 void va_argS(va_list args)
 {
-	char * s;
+	char *s;
 
 	s = va_arg(args, char *);
+	if (s == NULL)
+	{
+		printf("(nil");
+		return;
+	}
 	printf("%s", s);
 }
 
