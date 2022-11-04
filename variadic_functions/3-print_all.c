@@ -76,7 +76,6 @@ void va_argS(va_list args)
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	char *separator = "";
 
 	pa pas[] = {
 		{"c", va_argC},
