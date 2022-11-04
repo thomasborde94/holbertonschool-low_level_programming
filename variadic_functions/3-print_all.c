@@ -10,7 +10,7 @@
 
 void va_argC(va_list args)
 {
-	int c;
+	char c;
 
 	c = va_arg(args, int);
 	printf("%c", c);
