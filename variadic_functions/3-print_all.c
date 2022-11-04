@@ -88,8 +88,8 @@ void print_all(const char * const format, ...)
 	{
 		while (format[j])
 		{
-			if ((pas[i].type) == format[j])
-				return (pas[i].f);
+			if (*(pas[i].type) == format[j])
+				pas[i].f(args);
 			j++;
 		}
 		i++;
