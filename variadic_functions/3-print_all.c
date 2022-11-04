@@ -89,16 +89,15 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
-	while (pas[i].type != NULL)
+	while (format[i])
 	{
-		i = 0;
-		while (format[j])
+		j = 0;
 		{
-			if (*(pas[i].type) == format[j])
+			if (*(pas[j].type) == format[i])
 				pas[i].f(args);
-			i++;
+			j++;
 		}
-		j++;
+		i++;
 	}
 
 	printf("\n");
