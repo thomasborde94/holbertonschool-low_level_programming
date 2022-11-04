@@ -91,13 +91,14 @@ void print_all(const char * const format, ...)
 
 	while (pas[i].type != NULL)
 	{
+		i = 0;
 		while (format[j])
 		{
 			if (*(pas[i].type) == format[j])
 				pas[i].f(args);
-			j++;
+			i++;
 		}
-		i++;
+		j++;
 	}
 
 	printf("\n");
