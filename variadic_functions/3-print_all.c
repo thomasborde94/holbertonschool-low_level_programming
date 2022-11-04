@@ -76,13 +76,13 @@ void va_argS(va_list args)
 void print_all(const char * const format, ...)
 {
 	va_list args;
+	char *separator = "";
 
 	pa pas[] = {
 		{"c", va_argC},
 		{"i", va_argI},
 		{"f", va_argF},
-		{"s", va_argS},
-		{NULL, NULL}
+		{"s", va_argS}
 	};
 	int i = 0;
 	int j = 0;
@@ -92,10 +92,13 @@ void print_all(const char * const format, ...)
 	while (format[i])
 	{
 		j = 0;
+		while (*(pas[j].type) != format[i])
+			       j++;
+		if (j < 4)
 		{
-			if (*(pas[j].type) == format[i])
-				pas[i].f(args);
-			j++;
+			printf("%s", separator);
+			pas[j].f(args);
+			separator = ", ";
 		}
 		i++;
 	}
