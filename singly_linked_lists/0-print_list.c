@@ -3,7 +3,7 @@
 /**
  * print_list - prints all elements of the list_t list
  * Description: prints all elements of the list_t list
- * @list_t: list to print
+ * @h: list to print
  * Return: number of nodes
  */
 
@@ -14,7 +14,7 @@ size_t print_list(const list_t *h)
 	while (h != NULL)
 	{
 		if (h->str == NULL)
-			printf("[0] (nil)");
+			printf("[0] (nil)\n");
 
 		else
 			printf("[%d] %s\n", h->len, h->str);

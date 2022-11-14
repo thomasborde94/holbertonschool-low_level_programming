@@ -3,6 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * struct list - list to use for exercice 0
+ * Description: list to use for exercice 0
+ * @str: string to use
+ * @len: int to use
+ * @next: peointer to next node
+ */
 typedef struct list
 {
 	char *str;
