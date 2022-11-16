@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 
 	binary = atoi(b);
-	while (b > 0)
+	while (binary > 0)
 	{
 		reste = binary % 10;
 		decimal  = decimal + (reste * base);
