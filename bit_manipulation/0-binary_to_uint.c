@@ -23,8 +23,8 @@ unsigned int binary_to_uint(const char *b)
 	while (binary > 0)
 	{
 		reste = binary % 10;
-		decimal  = decimal + (reste * base);
 		binary /= 10;
+		decimal += reste * base;
 		base *= 2;
 	}
 	return (decimal);
