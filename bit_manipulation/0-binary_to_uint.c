@@ -20,6 +20,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 	}
 
+	i = 0;
 	for (length = 0; b[i]; i++)
 		length++;
 
