@@ -15,24 +15,13 @@ unsigned int countSetBits(unsigned int n);
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	return (countSetBits(n ^ m));
-}
+	unsigned long int xor = n ^ m, bits = 0;
 
-/**
- * countSetBits - counts number of bits
- * Description: counts number of bits
- * @n: int to count
- * Return: number of bits
- */
-
-unsigned int countSetBits(unsigned int n)
-{
-	unsigned int count = 0;
-
-	while (n > 0)
+	while (xor > 0)
 	{
-		count++;
-		n &= (n - 1);
+		bits += (xor & 1);
+		xor >>= 1;
 	}
-	return (count);
+
+	return (bits);
 }
