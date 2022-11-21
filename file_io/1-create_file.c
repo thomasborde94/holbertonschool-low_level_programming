@@ -5,7 +5,7 @@
  * Description: creates a file
  * @filename: file to create
  * @text_content: text to write in filename
- * @return: 1 on success, else -1
+ * Return: 1 on success, else -1
  */
 
 int create_file(const char *filename, char *text_content)
@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 			length++;
 	}
 
-	fd = open(filename, O_CREAT | O_RDWR, 0600);
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	w = write(fd, text_content, length);
 
 	if (fd == -1 || w == -1)
