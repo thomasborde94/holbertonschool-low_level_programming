@@ -5,7 +5,7 @@
  * Description: reads a textfile and prints it to std ouptut
  * @filename: file to read and print
  * @letters: number of letters it should read and print
- * Return: 0 if filename is null, else return file descriptor
+ * Return: 0 if filename is null, else return w
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -31,5 +31,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	close(fd);
-	return (fd);
+	return (w);
 }
