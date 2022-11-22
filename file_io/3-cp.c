@@ -30,6 +30,7 @@ int close_fd(int fd)
 int main(int argc, char *argv[])
 {
 	int to, from, w, r, closefd;
+	char *buffer;
 
 	if (argc != 3)
 	{
