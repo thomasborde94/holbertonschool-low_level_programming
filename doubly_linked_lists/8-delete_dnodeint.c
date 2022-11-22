@@ -1,6 +1,25 @@
 #include "lists.h"
 
 /**
+ * dlistint_len - returns number of elements
+ * Description: returns number of elements
+ * @h: list to go through
+ * Return: number of elements
+ */
+
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t elementCount = 0;
+
+	while (h)
+	{
+		elementCount++;
+		h = h->next;
+	}
+	return (elementCount);
+}
+
+/**
  * delete_dnodeint_at_index - deletes a node at given position
  * Description: deletes a node at given position
  * @head: list to go through
@@ -11,10 +30,15 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *temp = *head;
+	size_t elementCount;
 
 	if (*head == NULL)
 		return (-1);
 	if (temp == NULL)
+		return (-1);
+
+	elementCount = dlistint_len(*head);
+	if (index > elementCount)
 		return (-1);
 
 	if (index == 0)
