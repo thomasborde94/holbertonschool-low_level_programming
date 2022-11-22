@@ -1,4 +1,4 @@
-OB#include "main.h"
+#include "main.h"
 
 /**
  * create_buffer - creates the memory allocation of size 1024 for the buffer
