@@ -7,7 +7,7 @@
  * Return: 0 on success, else return -1
  */
 
-int close_fd(int fd)
+void close_fd(int fd)
 {
 	int closefd;
 
