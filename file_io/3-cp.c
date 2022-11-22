@@ -29,7 +29,7 @@ int close_fd(int fd)
 
 int main(int argc, char *argv[])
 {
-	int to, from, w, r, closefd;
+	int to, from, w, r;
 	char *buffer;
 
 	if (argc != 3)
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	r = (from, buffer, 1024);
+	r = read(from, buffer, 1024);
 	if (r == -1 || from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
