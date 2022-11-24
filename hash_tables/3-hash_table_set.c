@@ -1,6 +1,7 @@
 #include "hash_tables.h"
 #include <string.h>
 
+
 /**
  * create_item - creates an item to get into the hash table
  * Description: creates an item to get into the hash table
@@ -9,9 +10,9 @@
  * Return: pointer to the node of the item
  */
 
-hash_node_t *create_item(char* key, char* value)
+hash_node_t *create_item(const char* key, const char* value)
 {
-	hash_node_t item = malloc(sizeof(hash_node_t));
+	hash_node_t *item = malloc(sizeof(hash_node_t));
 	item->key = malloc(strlen(key) + 1);
 	item->value = malloc(strlen(value) + 1);
 
@@ -34,10 +35,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned int long slot;
 	hash_node_t *item, *prev;
+	char *valueCopy;
 
-	if (key == NULL)
+	if (key == NULL || ht == NULL || value == NULL)
 		return (0);
 
+	valueCopy = strdup(value);
 	slot = key_index(key, ht->size);
 	item = ht->array[slot];
 	if (item == NULL)
