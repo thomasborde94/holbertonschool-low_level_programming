@@ -35,7 +35,7 @@ hash_node_t *create_item(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned int long slot;
-	hash_node_t *item, *existing;
+	hash_node_t *item, *existing, *temp;
 	char *valueCopy;
 
 	if (key == NULL || ht == NULL || value == NULL)
@@ -62,7 +62,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		item = existing->next;
 
 	}
+	temp = create_item(key, valueCopy);
+	item = temp;
 	item->next = ht->array[slot];
-	ht->array[slot] = create_item(key, valueCopy);
 	return (1);
 }
