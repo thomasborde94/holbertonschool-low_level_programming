@@ -11,6 +11,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i = 0;
 	hash_node_t *item;
+	char comma = 0;
 
 	if (ht == NULL)
 		return;
@@ -23,13 +24,14 @@ void hash_table_print(const hash_table_t *ht)
 			continue;
 		for (;;)
 		{
+			if (comma == 1)
+				printf(", ");
 			printf("'%s' : '%s'", item->key, item->value);
 			if (item->next == NULL)
 				break;
 		}
 		item = item->next;
-		if (item != NULL)
-			printf(", ");
+		comma = 1;
 	}
 	printf("}\n");
 }
