@@ -10,9 +10,10 @@
  * Return: pointer to the node of the item
  */
 
-hash_node_t *create_item(const char* key, const char* value)
+hash_node_t *create_item(const char *key, const char *value)
 {
 	hash_node_t *item = malloc(sizeof(hash_node_t));
+
 	item->key = malloc(strlen(key) + 1);
 	item->value = malloc(strlen(value) + 1);
 
@@ -34,7 +35,7 @@ hash_node_t *create_item(const char* key, const char* value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned int long slot;
-	hash_node_t *item, *prev;
+	hash_node_t *item, *existing;
 	char *valueCopy;
 
 	if (key == NULL || ht == NULL || value == NULL)
@@ -57,10 +58,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			strcpy(item->value, value);
 			return (1);
 		}
+		existing = item;
+		item = existing->next;
 
-		prev = item;
-		item = prev->next;
 	}
-	prev->next = create_item(key, value);
+	item->next = ht->array[slot];
+	ht->array[slot] = item;
 	return (1);
 }
