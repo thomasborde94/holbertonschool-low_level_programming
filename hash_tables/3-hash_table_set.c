@@ -63,6 +63,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	}
 	item->next = ht->array[slot];
-	ht->array[slot] = item;
+	ht->array[slot] = create_item(key, valueCopy);
 	return (1);
 }
