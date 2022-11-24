@@ -41,7 +41,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	valueCopy = strdup(value);
-	slot = key_index(key, ht->size);
+	slot = key_index((const unsigned char *)key, ht->size);
 	item = ht->array[slot];
 	if (item == NULL)
 	{
