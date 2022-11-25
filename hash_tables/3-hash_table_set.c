@@ -3,42 +3,6 @@
 
 
 /**
- * create_item - creates an item to get into the hash table
- * Description: creates an item to get into the hash table
- * @key: key of the item
- * @value: value of the item
- * Return: pointer to the node of the item
- */
-
-hash_node_t *create_item(const char *key, const char *value)
-{
-	hash_node_t *item = malloc(sizeof(hash_node_t));
-	if (item == NULL)
-	{
-		return (0);
-	}
-
-	item->key = malloc(strlen(key) + 1);
-	if (item->key == NULL)
-	{
-		free(item);
-		return (0);
-	}
-	item->value = malloc(strlen(value) + 1);
-	if (item->value == NULL)
-	{
-		free(item->key);
-		free(item);
-		return (0);
-	}
-
-	strcpy(item->key, key);
-	strcpy(item->value, value);
-	item->next = NULL;
-	return (item);
-}
-
-/**
  * hash_table_set - adds an element to the hash table
  * Description: adds an element to the hash table
  * @ht: hash table we want to add an element to
@@ -49,36 +13,44 @@ hash_node_t *create_item(const char *key, const char *value)
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned int long slot;
-	hash_node_t *item, *existing;
-	char *valueCopy;
+	hash_node_t *new;
+	char *copy_value;
+	unsigned long int index, i;
 
-	if (key == NULL || ht == NULL || value == NULL)
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
-	valueCopy = strdup(value);
-	slot = key_index((const unsigned char *)key, ht->size);
-	item = ht->array[slot];
-	if (item == NULL)
+	copy_value = strdup(value);
+	if (copy_value == NULL)
+		return (0);
+
+	index = key_index((const unsigned char *)key, ht->size);
+
+	for (i = index; ht->array[i]; i++)
 	{
-		ht->array[slot] = create_item(key, valueCopy);
-		return (1);
-	}
-	while (item != NULL)
-	{
-		if (strcmp(item->key, key) == 0)
+		if (strcmp(ht->array[i]->key, key) == 0)
 		{
-			free(ht->array[slot]->value);
-			item->value = malloc(strlen(value) + 1);
-			strcpy(item->value, value);
+			free(ht->array[i]->value);
+			ht->array[i]->value = copy_value;
 			return (1);
 		}
-		existing = item;
-		item = existing->next;
-
 	}
-	item = create_item(key, valueCopy);
-	item->next = ht->array[slot];
-	ht->array[slot] = item;
+
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
+		return (0);
+
+	new->key = strdup(key);
+	if (new->key == NULL)
+	{
+		free(new);
+		return (0);
+	}
+
+	new->value = copy_value;
+	new->next  = ht->array[index];
+
+	ht->array[index] = new;
+
 	return (1);
 }
