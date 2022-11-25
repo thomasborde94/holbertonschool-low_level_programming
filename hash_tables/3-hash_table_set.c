@@ -15,7 +15,6 @@ hash_node_t *create_item(const char *key, const char *value)
 	hash_node_t *item = malloc(sizeof(hash_node_t));
 	if (item == NULL)
 	{
-		free(item);
 		return (0);
 	}
 
@@ -28,7 +27,8 @@ hash_node_t *create_item(const char *key, const char *value)
 	item->value = malloc(strlen(value) + 1);
 	if (item->value == NULL)
 	{
-		free(item->value);
+		free(item->key);
+		free(item);
 		return (0);
 	}
 
@@ -68,7 +68,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(item->key, key) == 0)
 		{
-			free(item->value);
+			free(ht->array[slot]->value);
 			item->value = malloc(strlen(value) + 1);
 			strcpy(item->value, value);
 			return (1);
